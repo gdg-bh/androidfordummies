@@ -4,21 +4,43 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-
+import android.widget.EditText;
+import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
+
+    private EditText cidadeEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView nome = (TextView) findViewById(R.id.nome);
-        nome.append(" Meu primeiro app Android");
+        cidadeEditText = (EditText) findViewById(R.id.cidadeEditText);
+
+        Button pesquisarButton = (Button) findViewById(R.id.pesquisarButton);
+        pesquisarButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (cidadeEditText != null && cidadeEditText.getText() != null && cidadeEditText.getText().toString().length() > 0) {
+                    pesquisarTempoCidade();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Cidade não preenchida!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 
+    private void pesquisarTempoCidade() {
+        //Método que irá efetuar a busca
+        /*Intent i = new Intent(getActivity(), TempoCidadeActivity.class);
+        i.putExtra("nomeCidade", cidadeEditText.getText().toString());
+        startActivity(i);*/
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
