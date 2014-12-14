@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.widget.TextView;
+import java.io.IOException;
+import android.util.Log;
 
 public class ResultadoTempoActivity extends ActionBarActivity {
 
@@ -21,8 +23,9 @@ public class ResultadoTempoActivity extends ActionBarActivity {
             TextView nomeCidadeTextView = (TextView) findViewById(R.id.cidadeInformadaTextView);
             nomeCidadeTextView.setText(nomeCidade);
 
-            
-
+            /*
+            assynctask
+            */
         }
     }
 }
