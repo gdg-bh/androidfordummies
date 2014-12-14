@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -37,9 +38,11 @@ public class MainActivity extends ActionBarActivity {
 
     private void pesquisarTempoCidade() {
         //Método que irá efetuar a busca
-        /*Intent i = new Intent(getActivity(), TempoCidadeActivity.class);
+
+        //Chama outra Activity passando o nome da cidade
+        Intent i = new Intent(getApplicationContext(), ResultadoTempoActivity.class);
         i.putExtra("nomeCidade", cidadeEditText.getText().toString());
-        startActivity(i);*/
+        startActivity(i);
     }
 
     @Override

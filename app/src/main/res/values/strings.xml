@@ -6,5 +6,6 @@
     <string name="qual_cidade_text">Para qual cidade você quer saber o tempo agora?</string>
     <string name="pesquisar_button">Pesquisar</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_resultado_tempo">ResultadoTempoActivity</string>
 
 </resources>
